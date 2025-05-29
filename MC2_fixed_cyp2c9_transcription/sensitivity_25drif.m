@@ -92,7 +92,7 @@ function [] = sensitivity_25drif()
             hold on;
     end
     leg = legend(ax(4),Legend{:,:},'Location','EastOutside','FontSize',fontsize,'Orientation','Vertical','NumColumns',1); 
-    title(leg,'25-DRIF concentration','FontWeight','Normal')
+    title(leg,'25-DRIF (concentration)','FontWeight','Normal')
     tiledplot.TileSpacing = 'compact';
     tiledplot.Padding = 'compact';
 
