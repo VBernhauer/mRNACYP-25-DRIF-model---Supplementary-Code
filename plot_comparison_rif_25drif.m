@@ -61,7 +61,7 @@ function [] = plot_comparison_rif_25drif()
               [0 0 0]];
     fontsize    = 14;
     figlabs     = {'(A1)','(A2)','(A3)','(A4)'};
-    Legend      = {'RIF (1 \muM)', 'RIF (10 \muM)', '25-DIRF (10 \muM)'};
+    Legend      = {'RIF (1 \muM)', 'RIF (10 \muM)', '25-DRIF (10 \muM)'};
  
     tiledplot = tiledlayout(1,4,'TileSpacing','Compact');
     set(gcf, 'Position',  [300, 100, 1500, 300]);
