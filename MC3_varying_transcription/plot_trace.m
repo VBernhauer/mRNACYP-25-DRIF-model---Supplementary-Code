@@ -42,8 +42,8 @@ function [] = plot_trace()
     tiledplot.TileSpacing = 'compact';
     tiledplot.Padding = 'compact';
 
-    savefig('figures/trace_varying_transcription.fig');
-    exportgraphics(gcf,'figures/trace_varying_transcription.png');
-    exportgraphics(gcf,'../../LaTeX/figures/trace_varying_transcription.eps','ContentType','vector');
+    savefig('./figures/trace_varying_transcription.fig');
+    exportgraphics(gcf,'./figures/trace_varying_transcription.png');
+    exportgraphics(gcf,'./figures/trace_varying_transcription.eps','ContentType','vector');
     
 end
