@@ -101,8 +101,6 @@ function [] = plot_comparison_rif_25drif()
             hold on;
     end
     leg = legend(ax(4),Legend{:,:},'Location','EastOutside','FontSize',fontsize,'Orientation','Vertical','NumColumns',1); 
-    % leg = legend(ax(1),Legend{:,:},'Location','SouthOutside','FontSize',fontsize,'Orientation','Horizontal');
-    % leg.Layout.Tile = 'North';
     title(leg,'Ligand (concentration)','FontWeight','Normal')
     tiledplot.TileSpacing   = 'compact';
     tiledplot.Padding       = 'compact';
@@ -110,7 +108,7 @@ function [] = plot_comparison_rif_25drif()
 
     savefig(strcat('figures/comparison_rif_25drif.fig'));
     exportgraphics(gcf,'figures/comparison_rif_25drif.png');
-    exportgraphics(gcf,'../LaTeX/figures/comparison_rif_25drif.eps','ContentType','vector');
+    exportgraphics(gcf,'./figures/comparison_rif_25drif.eps','ContentType','vector');
 
     
     %%% helper functions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

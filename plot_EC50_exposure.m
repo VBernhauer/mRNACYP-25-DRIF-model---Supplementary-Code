@@ -155,7 +155,7 @@ function [] = plot_EC50_exposure()
 
     savefig(strcat('./figures/EC50_exposure.fig'));
     exportgraphics(gcf,strcat('./figures/EC50_exposure.png'));
-    exportgraphics(gcf,strcat('../LaTeX/figures/EC50_exposure.eps'),'ContentType','vector');
+    exportgraphics(gcf,strcat('./figures/EC50_exposure.eps'),'ContentType','vector');
 
 
     %%% helper functions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

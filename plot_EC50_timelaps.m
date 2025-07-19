@@ -61,29 +61,17 @@ function [] = plot_EC50_timelaps()
 
     for i = 1:length(T_specific)
 
-        data_rif_c_min  = [];
-        data_rif_c_max  = [];
-        data_drif_c_min = [];
-        data_drif_c_max = [];
-        for idx_C = 1:length(logC)
+        data_rif_min = load(strcat('./EC50_minmax/EC50_rif_min_T_',num2str(T_specific(i)),'.mat'));
+        data_rif_c_min = data_rif_min.('data_rif_min');
 
-            % disp((num2str(logC(idx_C))));
+        data_rif_max = load(strcat('./EC50_minmax/EC50_rif_max_T_',num2str(T_specific(i)),'.mat'));
+        data_rif_c_max = data_rif_max.('data_rif_max');
 
-            data_rif = load(strcat('./EC50/',name,'_time_rif_',num2str(logC(idx_C)),'.mat'));
-            var_name = strcat('outputvec_rif_',name);
-            data_rif = data_rif.(var_name);
+        data_drif_min = load(strcat('./EC50_minmax/EC50_drif_min_T_',num2str(T_specific(i)),'.mat'));
+        data_drif_c_min = data_drif_min.('data_drif_min');
 
-            data_rif_c_min  = [data_rif_c_min, min(data_rif(:,idx_T_specific_vec(i)))];
-            data_rif_c_max  = [data_rif_c_max, min(max(data_rif(:,idx_T_specific_vec(i))),varmax)];
-
-            data_drif = load(strcat('./EC50/',name,'_time_drif_',num2str(logC(idx_C)),'.mat'));
-            var_name = strcat('outputvec_drif_',name);
-            data_drif = data_drif.(var_name);
-
-            data_drif_c_min  = [data_drif_c_min, min(data_drif(:,idx_T_specific_vec(i)))];
-            data_drif_c_max  = [data_drif_c_max, min(max(data_drif(:,idx_T_specific_vec(i))),varmax)];
-
-        end
+        data_drif_max = load(strcat('./EC50_minmax/EC50_drif_max_T_',num2str(T_specific(i)),'.mat'));
+        data_drif_c_max = data_drif_max.('data_drif_max');
 
         EC50_drif   = [];
         EC50_rif    = [];
@@ -124,7 +112,7 @@ function [] = plot_EC50_timelaps()
             'YLim',[varmin-0.1 varmax+0.1],...
             'FontSize',fontsize);
 
-        xlabel('Log_{10} concentration (\muM)','FontSize',fontsize);
+        xlabel('Log_{10} concentration (µM)','FontSize',fontsize);
         ylabel(ylabelfig,'FontSize',fontsize);
         set(gca,'TickLength',[0.015, 0.015])
         hold on;  
@@ -211,9 +199,9 @@ function [] = plot_EC50_timelaps()
         disp(strcat({'Image '},num2str(i),{' done.'}));
     end
 
-    % savefig(strcat('./figures/EC50_',name,'.fig'));
-    % exportgraphics(gcf,strcat('./figures/EC50_',name,'.png'));
-    % exportgraphics(gcf,strcat('../LaTeX/figures/EC50_',name,'.eps'),'ContentType','vector');
+    savefig(strcat('./figures/EC50_',name,'.fig'));
+    exportgraphics(gcf,strcat('./figures/EC50_',name,'.png'));
+    exportgraphics(gcf,strcat('./figures/EC50_',name,'.eps'),'ContentType','vector');
 
 
     %%% helper functions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

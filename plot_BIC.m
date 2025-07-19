@@ -80,6 +80,6 @@ function [] = plot_BIC()
 
 	savefig(strcat('./figures/BIC.fig'));
     exportgraphics(gcf,'./figures/BIC.png');
-    exportgraphics(gcf,'../LaTeX/figures/BIC.eps','ContentType','vector');
+    exportgraphics(gcf,'./figures/BIC.eps','ContentType','vector');
 
     end

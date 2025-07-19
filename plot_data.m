@@ -97,6 +97,6 @@ function [] = plot_data()
 
     savefig(strcat('figures/data.fig'));
     exportgraphics(gcf,'figures/data.png');
-    exportgraphics(gcf,'../LaTeX/figures/data.eps','ContentType','vector');
+    exportgraphics(gcf,'./figures/data.eps','ContentType','vector');
 
     end

@@ -122,7 +122,7 @@ function [] = EC50_reporter()
 
     savefig(strcat('./figures/EC50_reporters.fig'));
     exportgraphics(gcf,strcat('./figures/EC50_reporters.png'));
-    exportgraphics(gcf,strcat('../LaTeX/figures/EC50_reporters.eps'),'ContentType','vector');
+    exportgraphics(gcf,strcat('./figures/EC50_reporters.eps'),'ContentType','vector');
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
