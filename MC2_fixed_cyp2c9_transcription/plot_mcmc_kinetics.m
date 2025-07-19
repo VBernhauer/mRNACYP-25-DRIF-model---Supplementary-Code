@@ -148,9 +148,9 @@ function [] = plot_mcmc_kinetics()
     tiledplot.TileSpacing = 'compact';
     tiledplot.Padding = 'compact';
 
-    savefig(strcat('figures/kinetics_fixed_cyp2c9_transcription.fig'));
-    exportgraphics(gcf,strcat('figures/kinetics_fixed_cyp2c9_transcription.png'));
-    exportgraphics(gcf,strcat('../../LaTeX/figures/kinetics_fixed_cyp2c9_transcription.eps'),'ContentType','vector');
+    savefig(strcat('./figures/kinetics_fixed_cyp2c9_transcription.fig'));
+    exportgraphics(gcf,strcat('./figures/kinetics_fixed_cyp2c9_transcription.png'));
+    exportgraphics(gcf,strcat('./figures/kinetics_fixed_cyp2c9_transcription.eps'),'ContentType','vector');
              
 
     %%% helper functions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -104,9 +104,9 @@ function [] = sensitivity_25drif()
     tiledplot.Padding = 'compact';
 
 
-    savefig(strcat('figures/concentration_sensitivity.fig'));
-    exportgraphics(gcf,'figures/concentration_sensitivity.png');
-    exportgraphics(gcf,'../../LaTeX/figures/concentration_sensitivity.eps','ContentType','vector');
+    savefig(strcat('./figures/concentration_sensitivity.fig'));
+    exportgraphics(gcf,'./figures/concentration_sensitivity.png');
+    exportgraphics(gcf,'./figures/concentration_sensitivity.eps','ContentType','vector');
              
 
     

@@ -105,7 +105,7 @@ function [] = direct_sensitivity()
 
     savefig('./figures/direct_sensitivity.fig');
     exportgraphics(gcf,'./figures/direct_sensitivity.png');
-    exportgraphics(gcf,'../../LaTeX/figures/direct_sensitivity.eps','ContentType','vector');
+    exportgraphics(gcf,'./figures/direct_sensitivity.eps','ContentType','vector');
 
     
     %%% helper functions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
