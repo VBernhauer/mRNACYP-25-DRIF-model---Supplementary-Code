@@ -1,0 +1,5 @@
+MLvalue -24.98081118 
+k_pxrmet 0.00145846
+k_mRNA_cyp3a4fold 0.34200015
+k_mRNA_cyp2c9fold 0.14892815
+k_mRNA_cyp2b6fold 0.22473655
