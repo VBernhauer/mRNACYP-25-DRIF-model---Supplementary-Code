@@ -36,8 +36,8 @@ function [] = plot_trace()
     tiledplot.TileSpacing = 'compact';
     tiledplot.Padding = 'compact';
 
-    savefig(strcat('figures/trace_fixed_transcription.fig'));
-    exportgraphics(gcf,strcat('figures/trace_fixed_transcription.png'));
-    exportgraphics(gcf,strcat('../../LaTeX/figures/trace_fixed_transcription.eps'),'ContentType','vector');
+    savefig(strcat('./figures/trace_fixed_transcription.fig'));
+    exportgraphics(gcf,strcat('./figures/trace_fixed_transcription.png'));
+    exportgraphics(gcf,strcat('./figures/trace_fixed_transcription.eps'),'ContentType','vector');
     
 end
