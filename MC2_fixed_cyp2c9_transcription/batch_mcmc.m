@@ -4,6 +4,10 @@ format compact; format long;
 rng('default');
 warning('off');
 
+if ~exist('./chains', 'dir')
+    mkdir('./chains')
+end
+
 %%% load initial parameters
 parameters = load('paramsample.mat');
 parameters = parameters.sample;
