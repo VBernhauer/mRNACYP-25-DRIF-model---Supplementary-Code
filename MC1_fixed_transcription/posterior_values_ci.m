@@ -60,7 +60,7 @@ function [] = posterior_values_ci()
     parsmedian = median(chains);
     parsquantile = [];
     for kk = 1:size(chains,2)
-        parsquantile = [parsquantile; quantile(chains(:,kk),[0.05 0.95])];
+        parsquantile = [parsquantile; quantile(chains(:,kk),[0.025 0.975])];
     end
     
     
