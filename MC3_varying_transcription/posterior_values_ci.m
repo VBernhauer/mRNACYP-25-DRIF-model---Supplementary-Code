@@ -52,12 +52,12 @@ function [] = posterior_values_ci()
     end
     %%% save chains %%%
     save(strcat('./mlvalues.mat'),'mlvalue_array');
-            
+
     parsmean = mean(chains);
     parsmedian = median(chains);
     parsquantile = [];
     for kk = 1:size(chains,2)
-        parsquantile = [parsquantile; quantile(chains(:,kk),[0.05 0.95])];
+        parsquantile = [parsquantile; quantile(chains(:,kk),[0.025 0.975])];
     end
     
     
@@ -69,9 +69,9 @@ function [] = posterior_values_ci()
             a{2},...
             a{3},...
             a{4}};
-        
+
     names = {'parameter','mean','median','95CI lower', '95CI upper'};
-    
+
     fid = fopen(strcat('posteriorValues.txt'),'w');
 
     fprintf(fid, '%2s %2s %2s %2s %2s\n', names{:});
@@ -79,7 +79,7 @@ function [] = posterior_values_ci()
         fprintf(fid,'%0s %.8f %.8f %.8f %.8f\n',labs{kk},parsmean(kk),parsmedian(kk),parsquantile(kk,1),parsquantile(kk,2));
     end
     fclose(fid);
-    
+
     fidml = fopen(strcat('maxLikValues.txt'),'w');
 
     fprintf(fidml, '%2s %.8f \n', 'MLvalue', mlvalue);
