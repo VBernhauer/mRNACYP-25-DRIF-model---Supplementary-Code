@@ -110,6 +110,6 @@ function [] = plot_mcmc_posteriors_separate()
 
     savefig(strcat('figures/posteriors_rif_drif_comparison_separate.fig'));
     exportgraphics(gcf,'figures/posteriors_rif_drif_comparison_separate.png');
-    exportgraphics(gcf,'./figures/posteriors_rif_drif_comparison_separate.eps','ContentType','vector');
+    exportgraphics(gcf,'figures/posteriors_rif_drif_comparison_separate.eps','ContentType','vector');
 
 end

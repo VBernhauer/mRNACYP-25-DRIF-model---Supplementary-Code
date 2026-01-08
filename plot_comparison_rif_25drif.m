@@ -108,7 +108,7 @@ function [] = plot_comparison_rif_25drif()
 
     savefig(strcat('figures/comparison_rif_25drif.fig'));
     exportgraphics(gcf,'figures/comparison_rif_25drif.png');
-    exportgraphics(gcf,'./figures/comparison_rif_25drif.eps','ContentType','vector');
+    exportgraphics(gcf,'figures/comparison_rif_25drif.eps','ContentType','vector');
 
     
     %%% helper functions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
