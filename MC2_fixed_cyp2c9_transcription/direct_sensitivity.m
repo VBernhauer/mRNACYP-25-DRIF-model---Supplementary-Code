@@ -109,9 +109,9 @@ function [] = direct_sensitivity()
     tiledplot.Padding = 'compact';
 
 
-    savefig('./figures/direct_sensitivity.fig');
-    exportgraphics(gcf,'./figures/direct_sensitivity.png');
-    exportgraphics(gcf,'./figures/direct_sensitivity.eps','ContentType','vector');
+    savefig('figures/direct_sensitivity.fig');
+    exportgraphics(gcf,'figures/direct_sensitivity.png');
+    exportgraphics(gcf,'figures/direct_sensitivity.eps','ContentType','vector');
 
     
     %%% helper functions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

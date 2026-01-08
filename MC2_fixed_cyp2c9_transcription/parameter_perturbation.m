@@ -154,9 +154,9 @@ function [] = parameter_perturbation()
     tiledplot.Padding = 'compact';
 
     % Save the combined figure
-    savefig('./figures/combined_parameter_perturbation.fig');
-    exportgraphics(gcf, './figures/combined_parameter_perturbation.png');
-    exportgraphics(gcf, './figures/combined_parameter_perturbation.eps', 'ContentType', 'vector');
+    savefig('figures/combined_parameter_perturbation.fig');
+    exportgraphics(gcf, 'figures/combined_parameter_perturbation.png');
+    exportgraphics(gcf, 'figures/combined_parameter_perturbation.eps', 'ContentType', 'vector');
 
 
     %%% Helper Functions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

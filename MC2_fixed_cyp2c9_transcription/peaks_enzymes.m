@@ -110,6 +110,15 @@ function [] = peaks_enzymes()
     tiledplot.TileSpacing = 'compact';
     tiledplot.Padding = 'compact';
 
+    %%% save figure %%%
+    if ~exist('./figures', 'dir')
+        mkdir('./figures')
+    end
+
+    savefig(strcat('figures/peaks_enzymes.fig'));
+    exportgraphics(gcf,'figures/peaks_enzymes.png');
+    exportgraphics(gcf,'figures/peaks_enzymes.eps','ContentType','vector');
+
 
     %%% helper functions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
     %%% output of the model %%%

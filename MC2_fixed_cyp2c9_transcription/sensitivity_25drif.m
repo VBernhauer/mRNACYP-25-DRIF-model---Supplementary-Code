@@ -57,8 +57,7 @@ function [] = sensitivity_25drif()
     fontsize = 14;
     for ii = 1:length(Dose)
         Legend{ii} = strcat(num2str(Dose(ii)),' µM');
-    end
-    figlabs = {'(B1)','(B2)','(B3)','(B4)'};
+    end    
     tiledplot = tiledlayout(1,4,'TileSpacing','Compact');
     set(gcf, 'Position',  [300, 100, 1500, 300]);
     mm = 0;
@@ -90,12 +89,7 @@ function [] = sensitivity_25drif()
                 plot(ax(mm),T,ones(length(T)),'Color',[0 0 0],'LineWidth',1,'LineStyle','--')
                 hold on;
             end
-            title(strcat('\rm',Text{mm},ylabels{mm}),'FontSize',fontsize);
-            text(0.9,0.9,figlabs{mm},...
-                'Units','Normalized',...
-                'HorizontalAlignment','center',...
-                'FontSize',fontsize,...
-                'FontWeight','Normal');    
+            title(strcat('\rm',Text{mm},ylabels{mm}),'FontSize',fontsize);   
             hold on;
     end
     leg = legend(ax(4),Legend{:,:},'Location','EastOutside','FontSize',fontsize,'Orientation','Vertical','NumColumns',1); 
@@ -104,9 +98,9 @@ function [] = sensitivity_25drif()
     tiledplot.Padding = 'compact';
 
 
-    savefig(strcat('./figures/concentration_sensitivity.fig'));
-    exportgraphics(gcf,'./figures/concentration_sensitivity.png');
-    exportgraphics(gcf,'./figures/concentration_sensitivity.eps','ContentType','vector');
+    savefig(strcat('figures/concentration_sensitivity.fig'));
+    exportgraphics(gcf,'figures/concentration_sensitivity.png');
+    exportgraphics(gcf,'figures/concentration_sensitivity.eps','ContentType','vector');
              
 
     

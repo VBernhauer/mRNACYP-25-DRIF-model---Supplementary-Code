@@ -40,8 +40,8 @@ function [] = plot_trace()
     tiledplot.TileSpacing = 'compact';
     tiledplot.Padding = 'compact';
 
-    savefig(strcat('./figures/trace_fixed_cyp2c9_transcription.fig'));
-    exportgraphics(gcf,strcat('./figures/trace_fixed_cyp2c9_transcription.png'));
-    exportgraphics(gcf,strcat('./figures/trace_fixed_cyp2c9_transcription.eps'),'ContentType','vector');
+    savefig(strcat('figures/trace_fixed_cyp2c9_transcription.fig'));
+    exportgraphics(gcf,strcat('figures/trace_fixed_cyp2c9_transcription.png'));
+    exportgraphics(gcf,strcat('figures/trace_fixed_cyp2c9_transcription.eps'),'ContentType','vector');
     
 end
