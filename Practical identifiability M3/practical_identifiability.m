@@ -31,7 +31,7 @@ function [] = practical_identifiability()
     save('./MLvalues.mat','MLvalues');
 
 
-    k_pxrmax_span        = 0.0005:0.0005:0.015;
+    k_pxrmax_span        = [0.000005:0.000001:0.0005,0.0006:0.0001:0.015];
     k_mRNAcyp3a4_span    = 0.01:0.002:0.8;
     k_mRNAcyp2c9_span    = 0.01:0.002:0.8;
     k_mRNAcyp2b6_span    = 0.01:0.002:0.8;
