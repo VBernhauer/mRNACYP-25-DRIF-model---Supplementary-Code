@@ -151,9 +151,9 @@ function [] = plot_mcmc_kinetics()
     tiledplot.Padding = 'compact';
 
 
-    savefig(strcat('./figures/kinetics_fixed_transcription.fig'));
-    exportgraphics(gcf,strcat('./figures/kinetics_fixed_transcription.png'));
-    exportgraphics(gcf,strcat('./figures/kinetics_fixed_transcription.eps'),'ContentType','vector');
+    savefig(strcat('figures/kinetics_fixed_transcription.fig'));
+    exportgraphics(gcf,strcat('figures/kinetics_fixed_transcription.png'));
+    exportgraphics(gcf,strcat('figures/kinetics_fixed_transcription.eps'),'ContentType','vector');
              
 
     %%% helper functions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
