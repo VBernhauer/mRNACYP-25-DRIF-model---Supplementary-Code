@@ -60,7 +60,7 @@ function [] = plot_comparison_rif_25drif()
               [1 0 0];...
               [0 0 0]];
     fontsize    = 14;
-    figlabs     = {'(A1)','(A2)','(A3)','(A4)'};
+    figlabs     = {'(A)','(B)','(C)','(D)'};
     Legend      = {'RIF (1 µM)', 'RIF (10 µM)', '25-DRIF (10 µM)'};
  
     tiledplot = tiledlayout(1,4,'TileSpacing','Compact');
